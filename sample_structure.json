@@ -1,0 +1,127 @@
+{
+    "Platoon Headquarters": {
+        "count": 1,
+        "units": [
+            {
+                "name": "Platoon Leader",
+                "rank" : "1LT",
+                "weapons": ["M16A2"]
+            },
+            {
+                "name": "Platoon Sergeant",
+                "rank" : "SFC",
+                "weapons": ["M16A2"]
+            },
+            {
+                "name": "Radiotelephone Operator",
+                "rank" : "PFC",
+                "weapons": ["M16A2"]
+            }
+        ]
+    },
+    "Rifle Squad": {
+        "count": 3,
+        "units": [
+            {
+                "name": "Squad Leader",
+                "rank" : "SSG",
+                "weapons": ["M16A2"]
+            },
+            {
+                "name": "Alpha Team Leader",
+                "rank" : "SGT",
+                "weapons": ["M16A2"]
+            },
+            {
+                "name": "Automatic Rifleman",
+                "rank" : "SPC",
+                "weapons": ["M249"]
+            },
+            {
+                "name": "Grenadier",
+                "rank" : "SPC",
+                "weapons": ["M16A2 M203"]
+            },
+            {
+                "name": "Rifleman",
+                "rank" : "PFC",
+                "weapons": ["M16A2"]
+            },
+            {
+                "name": "Bravo Team Leader",
+                "rank" : "SGT",
+                "weapons": ["M16A2"]
+            },
+            {
+                "name": "Automatic Rifleman",
+                "rank" : "SPC",
+                "weapons": ["M249"]
+            },
+            {
+                "name": "Grenadier",
+                "rank" : "SPC",
+                "weapons": ["M16A2 M203"]
+            },
+            {
+                "name": "Rifleman",
+                "rank" : "PFC",
+                "weapons": ["M16A2"]
+            }
+        ]
+    },
+    "Machine Gun Squad": {
+        "count": 1,
+        "units": [
+            {
+                "name": "Squad Leader",
+                "rank" : "SSG",
+                "weapons": ["M16A2"]
+            },
+            {
+                "name": "Machine Gunner",
+                "rank" : "SPC",
+                "weapons": ["M60", "M9"]
+            },
+            {
+                "name": "Assistant Machine Gunner",
+                "rank" : "PFC",
+                "weapons": ["M16A2"]
+            },
+            {
+                "name": "Ammo Bearer",
+                "rank" : "PFC",
+                "weapons": ["M16A2"]
+            },
+            {
+                "name": "Machine Gunner",
+                "rank" : "SPC",
+                "weapons": ["M60", "M9"]
+            },
+            {
+                "name": "Assistant Machine Gunner",
+                "rank" : "PFC",
+                "weapons": ["M16A2"]
+            },
+            {
+                "name": "Ammo Bearer",
+                "rank" : "PFC",
+                "weapons": ["M16A2"]
+            },
+            {
+                "name": "Machine Gunner",
+                "rank" : "SPC",
+                "weapons": ["M60", "M9"]
+            },
+            {
+                "name": "Assistant Machine Gunner",
+                "rank" : "PFC",
+                "weapons": ["M16A2"]
+            },
+            {
+                "name": "Ammo Bearer",
+                "rank" : "PFC",
+                "weapons": ["M16A2"]
+            }
+        ]
+    }
+}
