@@ -10,3 +10,11 @@ class PlatoonSerializer(serializers.HyperlinkedModelSerializer):
         model = Platoon
         fields = ('id', 'name', 'author_id', 'platoon_size')
 
+class PlatoonDetailsSerializer(serializers.HyperlinkedModelSerializer):
+    """
+    Serializing all the Platoons
+    """
+    class Meta:
+        model = Platoon
+        fields = ('id', 'name', 'structure')
+
