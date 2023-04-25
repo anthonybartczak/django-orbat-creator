@@ -37,7 +37,7 @@ SECRET_KEY = 'django-insecure-in8a##!mhc6$)8)xav)w3e8r=cvb+w#je*c&uz9%#vnjjibd*q
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["orbat.toadres.pl"]
 
 
 # Application definition
