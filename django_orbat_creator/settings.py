@@ -39,7 +39,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'orbat.toadres.pl']
 
-CSRF_TRUSTED_ORIGINS = ['http://0.0.0.0:8000', 'orbat.toadres.pl']
+CSRF_TRUSTED_ORIGINS = ['http://0.0.0.0:8000', 'https://orbat.toadres.pl']
 
 # Application definition
 
