@@ -8,7 +8,7 @@ class PlatoonSerializer(serializers.HyperlinkedModelSerializer):
     """
     class Meta:
         model = Platoon
-        fields = ('id', 'name', 'country', 'branch', 'platoon_size', 'author_id',)
+        fields = ('id', 'name', 'era', 'country', 'branch', 'platoon_size', 'author_id',)
 
 class PlatoonDetailsSerializer(serializers.HyperlinkedModelSerializer):
     """
@@ -16,7 +16,7 @@ class PlatoonDetailsSerializer(serializers.HyperlinkedModelSerializer):
     """
     class Meta:
         model = Platoon
-        fields = ('id', 'name', 'structure')
+        fields = ('id', 'name', 'era', 'structure', 'notes', 'sources')
 
 class PlatoonIdentifiersSerializer(serializers.HyperlinkedModelSerializer):
     """

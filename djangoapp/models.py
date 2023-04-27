@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.contrib.postgres import fields
 import uuid
 import json
 
@@ -12,9 +13,12 @@ class Platoon(models.Model):
     )
     objects = models.Manager
     name = models.CharField(max_length=255)
+    era = fields.IntegerRangeField(null=True)
     country = models.CharField(max_length=255, null=True)
     branch = models.CharField(max_length=255, null=True)
     description = models.TextField(max_length=255, null=True)
+    notes = models.JSONField(null=True)
+    sources = models.JSONField(null=True)
     structure = models.JSONField(null=True)
     author = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     created = models.DateTimeField(auto_now_add=True)
