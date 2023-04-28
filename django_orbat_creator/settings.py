@@ -37,13 +37,16 @@ SECRET_KEY = 'django-insecure-in8a##!mhc6$)8)xav)w3e8r=cvb+w#je*c&uz9%#vnjjibd*q
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['http://localhost:3000/', '127.0.0.1', 'orbat.toadres.pl']
+ALLOWED_HOSTS = ['localhost:3000/', '127.0.0.1', 'orbat.toadres.pl']
 
 CSRF_TRUSTED_ORIGINS = ['http://localhost:3000/', 'http://0.0.0.0:8000', 'https://orbat.toadres.pl']
+
+CORS_ALLOW_ALL_ORIGINS = True
 
 # Application definition
 
 INSTALLED_APPS = [
+    "corsheaders",
     'djangoapp',
     'rest_framework',
     'rest_framework.authtoken',
