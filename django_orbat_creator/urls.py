@@ -20,7 +20,8 @@ from djangoapp.urls import router as orbat_router
 from rest_framework.authtoken import views
 
 urlpatterns = [
-    path('', include(orbat_router.urls)),
+    #path('', include(orbat_router.urls)),
+    path('api/', include('djangoapp.urls')),
     path('api/token', views.obtain_auth_token),
     path('admin', admin.site.urls),
 ]

@@ -28,4 +28,5 @@ class Platoon(models.Model):
 
     @property
     def platoon_size(self):
-        return self.structure["size"];
+        if self.structure:
+            return self.structure["size"];

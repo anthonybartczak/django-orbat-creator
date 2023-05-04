@@ -1,8 +1,9 @@
-from djangoapp.serializers import PlatoonSerializer, PlatoonDetailsSerializer, PlatoonIdentifiersSerializer
+from djangoapp.serializers import PlatoonSerializer, PlatoonDetailsSerializer, PlatoonIdentifiersSerializer, PlatoonCreateSerializer
 from .models import Platoon
 from rest_framework import viewsets
 from rest_framework.decorators import action
 from rest_framework.response import Response
+from rest_framework import status, generics
 
 # Create your views here.
 
@@ -15,6 +16,10 @@ class PlatoonsView(viewsets.ModelViewSet):
         queryset = Platoon.objects.filter(id=pk)
         serializer = PlatoonDetailsSerializer(queryset, many=True)
         return Response(serializer.data)
+
+class PlatoonsCreateView(viewsets.ModelViewSet):
+    queryset = Platoon.objects.all()
+    serializer_class = PlatoonCreateSerializer
 
 class PlatoonsIdentifiersView(viewsets.ModelViewSet):
     queryset = Platoon.objects.all()
