@@ -1,7 +1,7 @@
 from rest_framework import serializers
-from rest_framework.authtoken.models import Token
 from django.contrib.auth.models import User
 from .models import Platoon
+from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 
 class PlatoonSerializer(serializers.HyperlinkedModelSerializer):
     """
@@ -39,3 +39,15 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ( 'username', 'email')
+
+class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
+
+    @classmethod
+    def get_token(cls, user):
+        token = super().get_token(user)
+
+        token['id'] = user.id
+        token['user'] = user.username
+        token['email'] = user.email
+
+        return token

@@ -16,14 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from djangoapp.urls import router as orbat_router
-from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView ,TokenVerifyView
 
 urlpatterns = [
     #path('', include(orbat_router.urls)),
     path('api/', include('djangoapp.urls')),
-    path('api/token/', TokenObtainPairView.as_view()),
-    path('api/token/refresh/', TokenRefreshView.as_view()),
-    path('api/token/verify/', TokenVerifyView.as_view()),
     path('admin/', admin.site.urls),
 ]

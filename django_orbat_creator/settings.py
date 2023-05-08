@@ -33,7 +33,7 @@ environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-in8a##!mhc6$)8)xav)w3e8r=cvb+w#je*c&uz9%#vnjjibd*q'
+SECRET_KEY = env('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -161,6 +161,7 @@ REST_FRAMEWORK = {
 }
 
 SIMPLE_JWT = {
+    'TOKEN_OBTAIN_SERIALIZER': "rest_framework_simplejwt.serializers.CustomTokenObtainPairSerializer",
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=30),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
     'ROTATE_REFRESH_TOKENS': True,
