@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from rest_framework.authtoken.models import Token
+from django.contrib.auth.models import User
 from .models import Platoon
 
 class PlatoonSerializer(serializers.HyperlinkedModelSerializer):
@@ -33,3 +34,8 @@ class PlatoonIdentifiersSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Platoon
         fields = ('id',)
+
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ( 'username', 'email')
