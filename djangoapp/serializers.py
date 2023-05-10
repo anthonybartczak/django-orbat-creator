@@ -3,6 +3,12 @@ from django.contrib.auth.models import User
 from .models import Platoon
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 
+
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ('id', 'username', 'email')
+
 class PlatoonSerializer(serializers.HyperlinkedModelSerializer):
     """
     Serializing all the Platoons
@@ -23,6 +29,7 @@ class PlatoonCreateSerializer(serializers.HyperlinkedModelSerializer):
     """
     Serializing all the Platoons
     """
+
     class Meta:
         model = Platoon
         fields = ('id', 'name', 'structure', 'author_id', 'branch', 'country', 'description', 'notes', 'sources', 'era')
@@ -34,11 +41,6 @@ class PlatoonIdentifiersSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Platoon
         fields = ('id',)
-
-class UserSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = User
-        fields = ( 'username', 'email')
 
 class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
 
